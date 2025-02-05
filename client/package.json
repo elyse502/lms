@@ -10,8 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "humanize-duration": "^3.32.1",
+    "quill": "^2.0.3",
+    "rc-progress": "^4.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "react-simple-star-rating": "^5.1.7",
+    "react-youtube": "^10.1.0",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
