@@ -236,6 +236,7 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   ) : (
     <Loading />
