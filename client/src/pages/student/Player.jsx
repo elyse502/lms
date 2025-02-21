@@ -3,13 +3,15 @@ import { AppContext } from "../../context/AppContext";
 import { useParams } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import humanizeDuration from "humanize-duration";
+import YouTube from "react-youtube";
+import Footer from "../../components/student/Footer";
 
 const Player = () => {
   const { enrolledCourses, calculateChapterTime } = useContext(AppContext);
   const { courseId } = useParams();
   const [courseData, setCourseData] = useState(null);
   const [openSections, setOpenSections] = useState({});
-  const [PlayerData, setPlayerData] = useState(null);
+  const [playerData, setPlayerData] = useState(null);
 
   const getCourseData = () => {
     enrolledCourses.map((course) => {
@@ -113,8 +115,32 @@ const Player = () => {
         </div>
 
         {/* right column */}
-        <div></div>
+        <div className="md:mt-10">
+          {playerData ? (
+            <div>
+              <YouTube
+                videoId={playerData.lectureUrl.split("/").pop()}
+                iframeClassName="w-full aspect-video"
+              />
+              <div className="flex justify-between items-center mt-1">
+                <p>
+                  {playerData.chapter}.{playerData.lecture}{" "}
+                  {playerData.lectureTitle}
+                </p>
+                <button className="text-blue-600">
+                  {false ? "Completed" : "Mark Complete"}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <img
+              src={courseData ? courseData.courseThumbnail : ""}
+              alt={courseData ? courseData.courseTitle : ""}
+            />
+          )}
+        </div>
       </div>
+      <Footer />
     </>
   );
 };
