@@ -51,7 +51,7 @@ const AddCourse = () => {
     }
   };
 
-  const handleLecture = (action, chapterId, lectureId) => {
+  const handleLecture = (action, chapterId, lectureIndex) => {
     if (action === "add") {
       setCurrentChapterId(chapterId);
       setShowPopup(true);
