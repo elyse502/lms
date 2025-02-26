@@ -141,7 +141,10 @@ const AddCourse = () => {
 
           <div className="flex md:flex-row flex-col items-center gap-3">
             <p>Course Thumbnail</p>
-            <label htmlFor="thumbnailImage" className="flex items-center gap-3">
+            <label
+              htmlFor="thumbnailImage"
+              className="flex items-center gap-3 cursor-pointer"
+            >
               <img
                 src={assets.file_upload_icon}
                 alt="file_upload_icon"
