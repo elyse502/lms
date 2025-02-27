@@ -42,3 +42,14 @@ export const addCourse = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
+
+// Get Educator Courses
+export const getEducatorCourses = async (req, res) => {
+  try {
+    const educator = req.auth.userId;
+    const courses = await Course.find({ educator });
+    res.json({ success: true, courses });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
