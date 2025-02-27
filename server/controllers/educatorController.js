@@ -1,5 +1,5 @@
 import { clerkClient } from "@clerk/express";
-import Course from "../models/Course";
+import Course from "../models/Course.js";
 import { v2 as cloudinary } from "cloudinary";
 
 // Update role to educator
@@ -37,7 +37,7 @@ export const addCourse = async (req, res) => {
     newCourse.courseThumbnail = imageUpload.secure_url;
     await newCourse.save();
 
-    res.json({ success: true, message: "Course Added", newCourse });
+    res.json({ success: true, message: "Course Added" });
   } catch (error) {
     res.json({ success: false, message: error.message });
   }
