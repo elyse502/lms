@@ -11,6 +11,17 @@ A modern, full-stack e-learning platform built with the MERN stack
 
 </div>
 
+<br /><hr /><br />
+
+<div align="center">
+
+## LIVE - DEMO 🌐
+  
+VISIT 👉 [LINK](https://lms-frontend-eosin-sigma.vercel.app/)
+</div>
+
+<br/><hr/><br/>
+
 ## 🌟 Features
 
 ### For Students
@@ -167,7 +178,6 @@ For any questions or support, please contact:
 <div align="center">
 Made with ❤️ by <b>Elysée NIYIBIZI</b>
 </div>
-
 
 
 
