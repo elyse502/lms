@@ -123,7 +123,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 ```bash
 # Start backend server
 cd server
-npm run dev
+npm run start
 
 # Start frontend in a new terminal
 cd client
