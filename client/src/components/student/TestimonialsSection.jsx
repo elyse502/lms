@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
               <img
                 className="h-12 w-12 rounded-full"
                 src={testimonial.image}
-                alt={testimonial.name}
+                alt="profile-image"
               />
               <div>
                 <h1 className="text-lg font-medium text-gray-800">
